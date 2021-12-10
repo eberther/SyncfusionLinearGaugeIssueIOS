@@ -152,4 +152,9 @@
       <Name>SyncfusionLinearGaugeTest</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\plus_amber.png">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </BundleResource>
+  </ItemGroup>
 </Project>
