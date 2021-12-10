@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:gauge="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms"
+             x:Class="SyncfusionLinearGaugeTest.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid BackgroundColor="LimeGreen" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="1" Text="Targets" FontSize="Medium" Margin="10, 5"/>
+            <gauge:SfLinearGauge Grid.Row="2">
+                <gauge:SfLinearGauge.Annotations>
+                    <gauge:LinearGaugeAnnotation OffsetY="0.5" OffsetX="0.1">
+                        <gauge:LinearGaugeAnnotation.View>
+                            <Label Text="92" 
+                                   FontSize="Medium"/>
+                        </gauge:LinearGaugeAnnotation.View>
+                    </gauge:LinearGaugeAnnotation>
+                    <gauge:LinearGaugeAnnotation OffsetY="0.5" OffsetX="0.9">
+                        <gauge:LinearGaugeAnnotation.View>
+                            <Label Text="96" 
+                               FontSize="Medium"/>
+                        </gauge:LinearGaugeAnnotation.View>
+                    </gauge:LinearGaugeAnnotation>
+                </gauge:SfLinearGauge.Annotations>
+                <gauge:SfLinearGauge.Scales>
+                    <gauge:LinearScale ScaleBarSize="25"
+                                       x:Name="linearScale"
+                                       ScaleBarLength="125"
+                                       MinorTicksPerInterval="1" 
+                                       MinimumValue="92"
+                                       MaximumValue="96"
+                                       ScaleBarColor="#294b4a" 
+                                       ShowTicks="False" 
+                                       ShowLabels="False" 
+                                       CornerRadius="5" 
+                                       CornerRadiusType="Both">
+                        <gauge:LinearScale.Pointers>
+                            <gauge:SymbolPointer Value ="95" 
+                                                 x:Name="symbolpointer"
+                                                 MarkerShape="Image"                                                 
+                                                 ImageSource="plus_amber"                                                 
+                                                 Thickness="25"                                                
+                                                 Offset="-25">
+                            </gauge:SymbolPointer>
+                        </gauge:LinearScale.Pointers>
+                        <gauge:LinearScale.Ranges>
+                            <gauge:LinearRange StartValue="93.95" 
+                                               EndValue="94.05" 
+                                               StartWidth="25" 
+                                               EndWidth="25" 
+                                               Color="White"
+                                               Offset="-25"/>
+                        </gauge:LinearScale.Ranges>
+                    </gauge:LinearScale>
+                </gauge:SfLinearGauge.Scales>
+            </gauge:SfLinearGauge>
+        </Grid>
+        <Grid Grid.Row="2"
+              x:Name="gridrow2">
+        </Grid>
+
+    </Grid>
+
+
+</ContentPage>
