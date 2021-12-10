@@ -24,7 +24,7 @@ namespace SyncfusionLinearGaugeTest.iOS
         {
             global::Xamarin.Forms.Forms.Init();
 
-            Syncfusion.SfGauge.XForms.iOS.SfLinearGaugeRenderer.Init();
+            Syncfusion.SfGauge.XForms.iOS.SfGaugeRenderer.Init();
 
             LoadApplication(new App());
             return base.FinishedLaunching(app, options);
